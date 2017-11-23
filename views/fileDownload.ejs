@@ -1,0 +1,30 @@
+<h1>This is the files page</h1>
+
+<% files.forEach(function(data){ %>
+    <div>
+        <tr>
+            <td>
+                <%= data.originalname %> 
+                <%= data.filename%>   
+            </td>
+            <br>            
+            <td> <a href="/file/<%= data.filename%>" download="files">Download Files</a></td>            
+        </tr>
+    </div>
+    <% }); %>
+
+
+
+        <!-- 
+        <% for(let i = 0; i < files.length; i++){%>
+
+            <%= files[i].filename %>
+                <br>
+                <td>
+                    <br>
+                    <tr>
+                        <a href="/download/<%= files[i].filename %>" download="files">Download Files</a>
+                    </tr>
+                </td>
+
+                <% }; %> -->
